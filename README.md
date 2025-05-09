@@ -22,12 +22,17 @@ Consiste en un sistema de riego automático basado en Arduino, que simula el fun
   
 ---
 
-👩‍💻 Equipo TechGirls
-Ana Velazquez
-Keila Gonzalez
-Constanza Heinrich
-Araceli Estigarribia
-Jessica Bareiro
-Leticia Amarilla
+## 🧠 Ideas a futuro
+- Incorporar lectura activa del sensor de humedad.
+- Conexión a plataformas IoT como Adafruit IO para monitoreo remoto.
+- Automatizar múltiples ciclos de riego por día.
+
+## 👩‍💻 Equipo TechGirls
+- Ana Velazquez
+- Keila Gonzalez
+- Constanza Heinrich
+- Araceli Estigarribia
+-  Jessica Bareiro
+- Leticia Amarilla
 
 ---
