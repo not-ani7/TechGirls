@@ -19,4 +19,15 @@ Consiste en un sistema de riego automático basado en Arduino, que simula el fun
 - Cables jumper y protoboard
 - Bomba de agua
 - Sensor de humedad (definido pero no implementado en esta versión)
+  
+---
+
+👩‍💻 Equipo TechGirls
+Ana Velazquez
+Keila Gonzalez
+Constanza Heinrich
+Araceli Estigarribia
+Jessica Bareiro
+Leticia Amarilla
+
 ---
