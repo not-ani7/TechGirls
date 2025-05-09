@@ -23,25 +23,21 @@ void setup() {
 }
 
 void loop() { 
-  // Mostrar siempre "Tierra Seca"
-  lcd.clear();
-  lcd.setCursor(0, 0);
-  lcd.print("Tierra Seca");
-  Serial.println("Tierra Seca");
-  
-  // Activar el relé por 21 segundos
-  digitalWrite(8,LOW); // Activa el suministro de agua
-  delay(21000); 
-  
-  // Desactivar el relé y mostrar "Tierra Humeda"
-  digitalWrite(8,HIGH); // Corta el suministro de agua
-  lcd.clear();
-  lcd.setCursor(0, 0);
-  lcd.print("Tierra Humeda");
-  Serial.println("Tierra Humeda");
-  
-  // Detener el programa después de mostrar "Tierra Humeda"
-  while(true) {  
-    delay(1000); // Mantiene el estado sin hacer nada
+  water = digitalRead(6);  // Lee el estado del sensor de humedad
+
+  if(water == HIGH) { // Si el suelo está húmedo
+    digitalWrite(8,LOW); // Apaga el relé, corta el suministro de agua
+    Serial.println("El suelo está húmedo, se corta el riego.");
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Tierra Seca");
   }
-}
+  else { // Si el suelo está seco
+    digitalWrite(8,HIGH); // Enciende el relé, activa el suministro de agua
+    Serial.println("El suelo está seco, se activa el riego.");
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Tierra Humeda");
+  }
+  
+  delay(400); // Espera 400 ms antes de verificar nuevamente
